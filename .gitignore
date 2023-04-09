@@ -1,0 +1,16 @@
+.DS_Store
+backend/blog/migrations/__init__.py
+backend/blog/migrations/0001_initial.py
+backend/blog/migrations/__pycache__/__init__.cpython-311.pyc
+backend/blog/migrations/__pycache__/0001_initial.cpython-311.pyc
+backend/blog/__pycache__/__init__.cpython-311.pyc
+backend/blog/__pycache__/admin.cpython-311.pyc
+backend/blog/__pycache__/apps.cpython-311.pyc
+backend/blog/__pycache__/models.cpython-311.pyc
+backend/blog/__pycache__/schema.cpython-311.pyc
+frontend/cypress/e2e/example.cy.ts
+frontend/cypress/e2e/tsconfig.json
+frontend/cypress/fixtures/example.json
+frontend/cypress/support/commands.ts
+frontend/cypress/support/e2e.ts
+frontend/.vscode/extensions.json
