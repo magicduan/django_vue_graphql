@@ -1,8 +1,14 @@
 <script setup lang="ts" >
 import { toggleDark } from '~/composables';
 import { ref } from 'vue';
-const props = defineProps({
-  tagItems:{type:Array,required:true, default:[]}
+// const props = defineProps({
+//   tagItems:{type:Array,required:true, default:[]}
+// })
+import { useBlogData } from '../../datastore/blogDataStore';
+import { computed } from '@vue/reactivity';
+const blogData = useBlogData()
+const tagItems = computed(()=>{
+  return blogData.tagsMenu
 })
 
 const msg = ref("/hello/\"Hello Vue 3.0 + Element Plus + Vite\"")

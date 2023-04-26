@@ -15,6 +15,7 @@
     "element-plus": "^2.2.13",
     "graphql": "^16.6.0",
     "graphql-tag": "^2.12.6",
+    "pinia": "^2.0.34",
     "vue": "^3.2.36",
     "vue-router": "^4.1.6"
   },

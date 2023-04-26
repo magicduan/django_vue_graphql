@@ -4,31 +4,34 @@ import HelloWorld from './components/HelloWorld.vue';
 import gql from 'graphql-tag';
 import { useQuery } from '@vue/apollo-composable';
 import { computed } from '@vue/reactivity';
+import { useBlogData} from './datastore/blogDataStore'
 
-const {result,loading,error} =  useQuery(gql`
-  query getTags{
-    tags {
-          name
-    }
-  }
-`)
+// const {result,loading,error} =  useQuery(gql`
+//   query getTags{
+//     tags {
+//           name
+//     }
+//   }
+// `)
+// const blogData = useBlogData()
 
-const tags = computed(()=>{
-  let tagsArray = []
-  if (result.value){
-    result.value?.tags.forEach(tagName => {
-      let tagInfo = {path:"/tag/"+tagName.name,name:tagName.name}
-      tagsArray.push(tagInfo)
-    });
-  }
-  return tagsArray
+// const tags = computed(()=>{
+  // let tagsArray = []
+  // if (result.value){
+  //   result.value?.tags.forEach(tagName => {
+  //     let tagInfo = {path:"/tag/"+tagName.name,name:tagName.name}
+  //     tagsArray.push(tagInfo)
+  //   });
+  // }
+  // return tagsArray
 
-})
+// })
 
 </script>
 <template>
   <el-config-provider namespace="ep" >
-    <BaseHeader :tagItems="tags"/>
+    <!-- <BaseHeader :tagItems="tags"/> -->
+    <BaseHeader/>
     <div style="display: flex">
       <BaseSide />
       <div>
